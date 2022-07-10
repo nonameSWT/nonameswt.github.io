@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Ключевые слова для поиска">
+	<title>Basketball</title>
+</head>
+<style type="text/css">
+	h1{
+		color: red;
+		text-align: center;
+	}
+	p{
+		text-align: center;
+	}
+	.rules{
+		color: green;
+		text-align: center;
+	}
+	.bas{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 60%;
+	}
+	.zone1{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+	}
+	.center{
+		width: 500px;
+		margin: auto;
+	}
+	nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+}
+</style>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+$('nav').on('click', function() {
+  if ( $(this).hasClass('down') ) {
+    var movePos = $(window).scrollTop() + $(window).height();
+  }
+  if ( $(this).hasClass('top') ) {
+    var movePos = $(window).scrollTop() - $(window).height();
+  }
+  $('html, body').animate({
+    scrollTop: movePos}, 600);
+});
+});
+</script>
+<body>
+	<h1>Баскетбол</h1>
+	<p>Баскетбол - это командная игра, где нужно забросить мяч в кольцо. Обычно в баскетболе играет 5 человек в команде. Эта игра пришла к нам из Америки.</p>
+	<img class="bas" src="bas.jpg" alt="Тут будет баскетбол">
+	<h2 class="rules"> Правила игры</h2>
+	<div class="center">
+	<ul>
+		<li>В баскетболе побеждает та команда, каторая забросила наибольшее количество очков.</li>
+		<li>С мячом бегать нельзя - это пробежка, только стучать об землю.</li>
+		<li>Ногами мяча косаться нельзя.</li>
+		<li>Двумя руками мяч везти нельзя - это двойное ведение.</li>
+		<li>С трёхочковой линии ддаёться 3 очка, ближе неё 2.</li>
+		<li>Везти, остановиться, и везти нельзя - это двойное ведение.</li>
+		<li>Перед броском в кольцо или пасом, можно делать 2 шага.</li>
+		<li>Когда вы пересикаете чужую половину поля с мячом, на свою половину возвращаться нельзя.</li>
+		<li>Когда в начале игры, в центре круга сбрасовуют мяч, игрокам кроме капитанов в ней стоять нельзя.  </li>
+	</ul>
+</div>
+	<img class="zone1" src="zone1.jpeg" alt="Тут будет поле">
+</body>
+
+</html>
